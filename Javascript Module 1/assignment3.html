@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>assignment 3</title>
+  </head>
+
+  <body>
+    <div
+      style="
+        display: flex;
+        flex-direction: row;
+        gap: 90px;
+        justify-content: center;
+        align-items: center;
+      "
+    >
+      <div style="display: flex; flex-direction: column; width: 20%; gap: 20px">
+        <h1>Apologies for making it complex but I was curious about this</h1>
+        <h2>input three numbers</h2>
+        <input type="text" id="integer1" placeholder="first integer" />
+        <input type="text" id="integer2" placeholder="second integer" />
+        <input type="text" id="integer3" placeholder="third integer" />
+
+        <button onclick="sum()">Sum</button>
+        <button onclick="product()">Product</button>
+        <button onclick="average()">average</button>
+      </div>
+      <div
+        style="
+          flex: 1;
+          display: flex;
+          flex-direction: row;
+          gap: 90px;
+          justify-content: center;
+          align-items: center;
+          box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+            rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+            rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+          max-width: 50%;
+          border-radius: 20px;
+          height: 100px;
+        "
+      >
+        <h3 id="sumOutput"></h3>
+        <h3 id="productOutput"></h3>
+        <h3 id="averageOutput"></h3>
+      </div>
+    </div>
+    <script>
+      function sum() {
+        const num1 = Number(document.getElementById("integer1").value);
+        const num2 = Number(document.getElementById("integer2").value);
+        const num3 = Number(document.getElementById("integer3").value);
+        const sum = num1 + num2 + num3;
+        const output = document.getElementById("sumOutput");
+        output.innerText = `Sum: ${sum}`;
+      }
+      function product() {
+        const num1 = Number(document.getElementById("integer1").value);
+        const num2 = Number(document.getElementById("integer2").value);
+        const num3 = Number(document.getElementById("integer3").value);
+        const product = num1 * num2 * num3;
+        const output = document.getElementById("productOutput");
+        output.innerText = `Product: ${product}`;
+      }
+      function average() {
+        const num1 = Number(document.getElementById("integer1").value);
+        const num2 = Number(document.getElementById("integer2").value);
+        const num3 = Number(document.getElementById("integer3").value);
+        const average = (num1 + num2 + num3) / 3;
+        const output = document.getElementById("averageOutput");
+        output.innerText = `Average: ${average}`;
+      }
+    </script>
+  </body>
+</html>

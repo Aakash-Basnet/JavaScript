@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Welcome to Hogwarts School of Witchcraft and Wizardry</h1>
+    <input type="text" id="name" placeholder="Name here" />
+    <button onclick="school()">Sorting Hat</button>
+    <h2 id="school"></h2>
+    <script>
+      function school() {
+        number = Math.floor(Math.random() * 4);
+        if (number === 0) {
+          result = "Gryffindor";
+        } else if (number === 1) {
+          result = "Slytherin";
+        } else if (number === 2) {
+          result = "Hufflepuff";
+        } else {
+          result = "Ravenclaw";
+        }
+        const output = document.getElementById("school");
+        output.innerText = `Your class is ${result}`;
+      }
+    </script>
+  </body>
+</html>
